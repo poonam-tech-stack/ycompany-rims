@@ -1,0 +1,154 @@
+{
+  "products": [
+    {
+      "_id": 1,
+      "name": "7 Runinng Shoes",
+      "category": "men",
+      "description": "7 Running Shoes",
+      "image": "https://i.ibb.co/s1drrGn/7-Runinng-Shoes.png",
+      "price": "2700",
+      "productType": "shoes",
+      "tags": ["shoes for men", "running shoes"]
+    },
+    {
+      "_id": 2,
+      "name": "Laceup Sneaker",
+      "category": "men",
+      "description": "Laceup Sneaker",
+      "image": "https://i.ibb.co/dfFrYqm/Laceup-Sneaker.png",
+      "price": "5000",
+      "productType": "shoes",
+      "tags": ["shoes for men", "casual shoes"]
+    },
+    {
+      "_id": 3,
+      "name": "Colour Block Sneaker",
+      "category": "men",
+      "description": "Splash Colour block Sneaker",
+      "image": "https://i.ibb.co/ySTPwQg/Splash-Colour-Block-Sneaker.png",
+      "price": "6300",
+      "productType": "shoes",
+      "tags": ["shoes for men"]
+    },
+    {
+      "_id": 4,
+      "name": "Static Sneaker",
+      "category": "men",
+      "description": "Staic Colour Block Sneaker",
+      "image": "https://i.ibb.co/7jTKYk9/Staic-Colour-Block-Sneaker.png",
+      "price": "7899",
+      "productType": "shoes",
+      "tags": ["shoes for men"]
+    },
+    {
+      "_id": 5,
+      "name": "Speed Shoes",
+      "category": "men",
+      "description": "Zenon Speed Shoes",
+      "image": "https://i.ibb.co/xDrtxQp/Zenon-Speed-Shoes.png",
+      "price": "5678",
+      "productType": "shoes",
+      "tags": ["shoes for men"]
+    },
+    {
+      "_id": 6,
+      "name": "Zip Front Insert Pocket",
+      "category": "men",
+      "description": "Quilted Zip Front Insert Pocket",
+      "image": "https://i.ibb.co/qBxzfyr/Quilted-Zip-Front-Insert-Pocket.png",
+      "price": "8999",
+      "productType": "jackets",
+      "tags": ["jackets for men"]
+    },
+    {
+      "_id": 7,
+      "name": "Bomber Jacket",
+      "category": "men",
+      "description": "Zip Front Bomber Jacket",
+      "image": "https://i.ibb.co/vwhsnTW/Zip-Front-Bomber-Jacket.png",
+      "price": "6000",
+      "productType": "jackets",
+      "tags": ["jackets for men"]
+    },
+    {
+      "_id": 8,
+      "name": "Checked Front Open Jacket",
+      "category": "women",
+      "description": "Checked Front Open Jacket",
+      "image": "https://i.ibb.co/hd7V9vL/Checked-Front-Open-Jacket.png",
+      "price": "4000",
+      "productType": "jackets",
+      "tags": ["jackets for women"]
+    },
+    {
+      "_id": 9,
+      "name": "Front Open Blouson Jacket",
+      "category": "women",
+      "description": "",
+      "image": "https://i.ibb.co/NFGFMhL/Front-Open-Blouson-Jacket.png",
+      "price": "8999",
+      "productType": "jackets",
+      "tags": ["jackets for women"]
+    },
+    {
+      "_id": 10,
+      "name": "Long Coat Wooven Sleaves",
+      "category": "women",
+      "description": "Long Coat Wooven Sleaves",
+      "image": "https://i.ibb.co/xHKhRPr/Long-Coat-with-Wooven-Sleaves.png",
+      "price": "6000",
+      "productType": "jackets",
+      "tags": ["coat for women", "coat"]
+    },
+    {
+      "_id": 11,
+      "name": "Paiseley Print Shawl With Frayed Hames",
+      "category": "women",
+      "description": "Paiseley Print Shawl With Frayed Hames",
+      "image": "https://i.ibb.co/QMjsTwJ/Paiseley-Print-Shawl-With-Frayed-Hames.png",
+      "price": "6888",
+      "productType": "shawl",
+      "tags": ["shawl for women", "shawls"]
+    },
+    {
+      "_id": 12,
+      "name": "Textured Coat",
+      "category": "women",
+      "description": "Textured Coat",
+      "image": "https://i.ibb.co/m5sp7ds/Textured-Coat.png",
+      "price": "8000",
+      "productType": "coat",
+      "tags": ["coat for women", "coats"]
+    },
+    {
+      "_id": 13,
+      "name": "Wooven Shawl",
+      "category": "women",
+      "description": "Wooven Shawl",
+      "image": "https://i.ibb.co/tXnkpKB/Wooven-Shawl.png",
+      "price": "5888",
+      "productType": "shawl",
+      "tags": ["shawl for women", "shawls"]
+    },
+    {
+      "_id": 14,
+      "name": "Pink Bomber Jacket",
+      "category": "kids",
+      "description": "Pink Bomber Jacket",
+      "image": "https://i.ibb.co/NpK4xD0/Pink-Bomber-Jacket.png",
+      "price": "4000",
+      "productType": "jackets",
+      "tags": ["jacket for girls", "jackets for kids", "kids jacket"]
+    },
+    {
+      "_id": 15,
+      "name": "Blues Bomber Jacket",
+      "category": "kids",
+      "description": "Blue Bomber Jacket",
+      "image": "https://i.ibb.co/khmR4dg/Blue-Bomber-Jacket.png",
+      "price": "5000",
+      "productType": "jackets",
+      "tags": ["jacket for boys", "jackets for kids", "kids jacket"]
+    }
+  ]
+}
