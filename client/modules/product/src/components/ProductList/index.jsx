@@ -24,13 +24,13 @@ const ProductList = () => {
   return (
     <main>
       <section>
-      <Container sx={{ py: 8 }} maxWidth="md">
-        <Grid container spacing={4}>
-          {products?.map((product) => (
-            <Product key={product._id} product={product} />
-          ))}
-        </Grid>
-      </Container>
+        <Container sx={{ py: 8 }} maxWidth="md">
+          <Grid container spacing={4}>
+            {products?.map((product) => (
+              <Product key={product._id} product={product} />
+            ))}
+          </Grid>
+        </Container>
       </section>
     </main>
   );

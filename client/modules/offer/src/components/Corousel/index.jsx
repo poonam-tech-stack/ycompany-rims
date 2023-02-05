@@ -1,8 +1,7 @@
 import * as React from "react";
 import { useHistory } from "react-router-dom";
 import { useTheme, styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import { MobileStepper, Button } from "@mui/material";
+import { Box, MobileStepper, Button } from "@mui/material";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
