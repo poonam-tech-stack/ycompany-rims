@@ -1,37 +1,50 @@
-name: deploy-app_shell
+name: deploy-shared
 
 on:
   push: 
     branches:
       - master
     paths:
-      - 'client/modules/app_shell/**'
+      - 'client/modules/shared/**'
 
 defaults: 
   run:
-    working-directory: client/modules/app_shell
+    working-directory: client/modules/shared
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps: 
-      - uses: actions/checkout@v2
-      - run: npm install
-      - run: npm run build
-        env: 
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build
+      run: |
+        npm install
+        npm run build
+        
+      env: 
           PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
 
       - uses: ItsKarma/aws-cli@v1.70.0
         with: 
-          args: s3 sync client/modules/app_shell/dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/app_shell/latest
+          args: s3 sync client/modules/shared/dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/shared/latest
         env: 
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       
       - uses: ItsKarma/aws-cli@v1.70.0
         with: 
-          args: cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/app_shell/latest/index.html"
+          args: cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/shared/latest/index.html"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
