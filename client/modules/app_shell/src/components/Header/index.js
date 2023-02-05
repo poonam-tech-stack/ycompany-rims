@@ -42,7 +42,7 @@ const Header = ({ isSignedIn = false }) => {
   const handleCategoryClick = (category) => {
     history.push(`/shop?category=${category.toLowerCase()}`);
   };
-  
+
   return (
     <header>
       <AppBar position="static" color="header">
@@ -166,7 +166,7 @@ const Header = ({ isSignedIn = false }) => {
             <Button
               color="link"
               component={RouterLink}
-              to={isSignedIn ? "/" : "/auth/signin"}
+              to={isSignedIn ? "/" : "/signin"}
             >
               {isSignedIn ? "Logout" : "Login"}
             </Button>

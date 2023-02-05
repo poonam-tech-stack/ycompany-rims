@@ -7,10 +7,10 @@ import Routes from "./components/Routes";
 ReactDOM.render(
   <Router>
     <Switch>
-      <Route path="/auth">
+      <Route path="/signin">
         <Routes />
       </Route>
-      <Redirect to="/auth" from="/" />
+      <Redirect to="/signin" from="/" />
     </Switch>
   </Router>,
   document.getElementById("auth")

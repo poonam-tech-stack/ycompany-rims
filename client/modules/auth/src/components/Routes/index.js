@@ -12,7 +12,7 @@ const Routes = () => {
   return (
     <ThemeProvider theme={appTheme}>
       <CssBaseline />
-      <Route exact path={`${path}/signIn`}>
+      <Route exact path={`${path}`}>
         <Login />
       </Route>
     </ThemeProvider>
