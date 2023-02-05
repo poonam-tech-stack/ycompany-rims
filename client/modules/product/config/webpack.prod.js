@@ -19,7 +19,7 @@ const prodConfig = {
         "./SearchAutoComplete": "./src/components/SearchAutoComplete",
       },
       remotes: {
-        shared: `shared@${domain}/shared/latest/remoteEntry.js`,
+        shared: `shared@${domain}shared/latest/remoteEntry.js`,
       },
       shared: {
         ...deps,

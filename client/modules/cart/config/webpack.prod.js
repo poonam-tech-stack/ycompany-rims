@@ -15,7 +15,7 @@ const prodConfig = {
       name: "cart",
       filename: "remoteEntry.js",
       remotes: {
-        shared: `shared@${domain}/shared/latest/remoteEntry.js`,
+        shared: `shared@${domain}shared/latest/remoteEntry.js`,
       },
       exposes: {
         "./Routes": "./src/components/Routes",
