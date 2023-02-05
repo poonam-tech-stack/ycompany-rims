@@ -7,15 +7,10 @@ const port = 8001;
 const devConfig = {
   mode: "development",
   output: {
-    publicPath: `http://localhost:${8001}/`,
+    publicPath: `http://localhost:${port}/`,
   },
   resolve: {
     extensions: [".jsx", ".js", ".json"],
-  },
-  devtool: "inline-source-map",
-  devServer: {
-    port,
-    historyApiFallback: true,
   },
   devtool: "inline-source-map",
   devServer: {

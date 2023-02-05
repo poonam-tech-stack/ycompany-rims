@@ -6,9 +6,8 @@ import CartItem from "../CartItem";
 import CartTotal from "../CartTotal";
 
 const CartDetails = () => {
-  const {
-    state: { cartItems: cartItemState },
-  } = useLocation();
+  const cartItemState = useLocation().state?.cartItems;
+
   const [cartItems, setCartItems] = useState(cartItemState);
 
   const deleteItem = ({ id }) => {
@@ -21,7 +20,7 @@ const CartDetails = () => {
         <Typography variant="h4" color="secondary">
           Shopping Cart
         </Typography>
-        {cartItems.map((cartItem) => {
+        {cartItems?.map((cartItem) => {
           return (
             <CartItem
               key={cartItem._id}
@@ -30,7 +29,9 @@ const CartDetails = () => {
             />
           );
         })}
-        <CartTotal cartItems={cartItems} />
+        {cartItems && cartItems.length > 0 && (
+          <CartTotal cartItems={cartItems} />
+        )}
       </Container>
     </Box>
   );

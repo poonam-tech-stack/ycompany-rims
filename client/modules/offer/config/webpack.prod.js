@@ -2,20 +2,21 @@ const { merge } = require("webpack-merge");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const commonConfig = require("./webpack.common");
 const deps = require("../package.json").dependencies;
-const prodDomain = process.env.PRODUCTION_DOMAIN;
+const domain = process.env.PRODUCTION_DOMAIN;
 
 const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
+    publicPath: '/offer/latest/'
   },
   plugins: [
     new ModuleFederationPlugin({
       name: "offer",
       filename: "remoteEntry.js",
       remotes: {
-        shared: `shared@${prodDomain}/remoteEntry.js`,
-        product: `product@${prodDomain}/remoteEntry.js`,
+        shared: `shared@${domain}/shared/latest/remoteEntry.js`,
+        product: `product@${domain}/product/latest/remoteEntry.js`,
       },
       exposes: {
         "./Offers": "./src/components/LatestOffers",

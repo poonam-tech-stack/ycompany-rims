@@ -2,19 +2,20 @@ const { merge } = require("webpack-merge");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const commonConfig = require("./webpack.common");
 const deps = require("../package.json").dependencies;
-const prodDomain = process.env.PRODUCTION_DOMAIN;
+const domain = process.env.PRODUCTION_DOMAIN;
 
 const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
+    publicPath: '/cart/latest/'
   },
   plugins: [
     new ModuleFederationPlugin({
       name: "cart",
       filename: "remoteEntry.js",
       remotes: {
-        shared: `shared@${prodDomain}/remoteEntry.js`,
+        shared: `shared@${domain}/shared/latest/remoteEntry.js`,
       },
       exposes: {
         "./Routes": "./src/components/Routes",
