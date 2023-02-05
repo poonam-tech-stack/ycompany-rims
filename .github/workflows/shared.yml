@@ -24,6 +24,9 @@ jobs:
         run: yarn run build
         env:
           PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
       - uses: chrislennon/action-aws-cli@v1.1
         env:
             ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
