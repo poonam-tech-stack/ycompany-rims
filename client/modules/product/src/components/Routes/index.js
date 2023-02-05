@@ -9,11 +9,12 @@ import ProductView from "../ProductView";
 import ProductSearch from "../ProductSearch";
 
 import { appTheme } from "shared/AppTheme";
+import { getGraphqlBaseUri } from "shared/Utils";
 
 const Routes = () => {
   const { path } = useRouteMatch();
   const client = new ApolloClient({
-    uri: "http://localhost:4000/graphql",
+    uri: getGraphqlBaseUri(),
     cache: new InMemoryCache(),
   });
 

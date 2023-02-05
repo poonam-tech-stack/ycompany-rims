@@ -23,7 +23,8 @@ const devConfig = {
       filename: "remoteEntry.js",
       exposes: {
         "./AppTheme": "./src/theme",
-        "./ErrorPage": "./src/components/ErrorPage"
+        "./ErrorPage": "./src/components/ErrorPage",
+        "./Utils": "./src/utils"
       },
       shared: {
         ...deps,

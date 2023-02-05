@@ -4,6 +4,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import { CssBaseline, Box } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { appTheme } from "shared/AppTheme";
+import { getGraphqlBaseUri } from 'shared/Utils';
 
 import Footer from "./components/Footer";
 import AsyncLoader from "./components/AsyncLoader";
@@ -15,7 +16,7 @@ const CartRoutes = React.lazy(() => import("cart/Routes"));
 const AuthRoutes = React.lazy(() => import("auth/Routes"));
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql", //TODO: Remove localhost linnk..
+  uri: getGraphqlBaseUri(),
   cache: new InMemoryCache(),
 });
 
@@ -32,7 +33,7 @@ const App = () => (
               <Route path="/" exact>
                 <Home />
               </Route>
-              <Route path="/auth">
+              <Route path="/signin">
                 <AuthRoutes />
               </Route>
               <Route path="/shop">

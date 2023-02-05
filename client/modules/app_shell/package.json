@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "webpack --config config/webpack.prod.js",
-    "build:dev": "webpack --mode development",
-    "start": "webpack serve --config config/webpack.dev.js",
-    "start:live": "webpack-dev-server --mode development --liveReload",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "build:dev": "cross-env NODE_ENV=development webpack --mode development",
+    "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
+    "start:live": "cross-env NODE_ENV=development webpack-dev-server --mode development --liveReload",
     "test": "jest --coverage"
   },
   "devDependencies": {

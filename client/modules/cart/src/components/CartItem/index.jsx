@@ -51,23 +51,32 @@ const CartItem = ({ cartItem, deleteItem }) => {
           <Typography variant="subTitle2">{description}</Typography>
         </Box>
         <Box>
-          <IconButton aria-label="Increment Quantity" color="inherit">
-            <AddIcon onClick={handleAddItem} />
+          <IconButton
+            aria-label="Increment Quantity"
+            color="inherit"
+            onClick={handleAddItem}
+          >
+            <AddIcon />
           </IconButton>
           <Typography variant="span">{quant}</Typography>
           <IconButton
             aria-label="Decrement Quantity"
             color="inherit"
             disabled={quant === 0}
+            onClick={handleRemoveItem}
           >
-            <RemoveIcon onClick={handleRemoveItem} />
+            <RemoveIcon />
           </IconButton>
         </Box>
         <Typography variant="body1" justifyContent="end">
           {price}
         </Typography>
-        <IconButton aria-label="Remove item from cart" color="inherit">
-          <ClearIcon onClick={handleRemoveCartItem} />
+        <IconButton
+          aria-label="Remove item from cart"
+          color="inherit"
+          onClick={handleRemoveCartItem}
+        >
+          <ClearIcon />
         </IconButton>
       </Box>
       <Divider variant="inset" />
