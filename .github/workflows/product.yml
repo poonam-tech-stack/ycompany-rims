@@ -1,0 +1,40 @@
+name: deploy-product
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - client/modules/product/**
+defaults:
+  run:
+    working-directory: client/modules/product
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+      - name: Install dependencies
+        run: yarn install
+      - name: Build
+        run: yarn run build
+        env:
+          PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
+      - uses: chrislennon/action-aws-cli@v1.1
+        env:
+            ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+      - run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/product/latest
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        
+      - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/product/latest/remoteEntry.js"
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
