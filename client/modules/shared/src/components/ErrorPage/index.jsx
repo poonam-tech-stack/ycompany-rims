@@ -18,7 +18,7 @@ const ErrorPage = () => (
       <ErrorIcon color="error" sx={{ m: 1 }} />
       <Typography variant="h5">OOPS! Something went wrong.</Typography>
     </Box>
-    <Typography variant="h6">Please try again later.</Typography>
+    <Typography variant="h6">Please try again later in sometime.</Typography>
   </Box>
 );
 
