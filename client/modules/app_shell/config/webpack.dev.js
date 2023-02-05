@@ -7,7 +7,7 @@ const port = 8000;
 const devConfig = {
   mode: "development",
   output: {
-    filename: "[name].[hash].js",
+    publicPath: `http://localhost:${port}/`,
   },
   devtool: "inline-source-map",
   devServer: {
