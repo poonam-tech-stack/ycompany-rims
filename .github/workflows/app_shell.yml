@@ -25,6 +25,7 @@ jobs:
         env:
           PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to aws
