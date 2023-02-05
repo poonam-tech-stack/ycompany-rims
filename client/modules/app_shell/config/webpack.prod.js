@@ -3,7 +3,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const commonConfig = require("./webpack.common");
 const deps = require("../package.json").dependencies;
 const domain = process.env.PRODUCTION_DOMAIN;
-console.log({domain})
+
 const prodConfig = {
   mode: "production",
   output: {
@@ -14,11 +14,11 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: "app_shell",
       remotes: {
-        auth: `auth@${domain}auth/latest11/remoteEntry.js`,
-        cart: `cart@${domain}cart/latest/remoteEntry.js`,
-        offer: `offer@${domain}offer/latest/remoteEntry.js`,
-        product: `product@${domain}product/latest/remoteEntry.js`,
-        shared: `shared@${domain}shared/latest/remoteEntry.js`,
+        auth: `auth@${domain}/auth/latest/remoteEntry.js`,
+        cart: `cart@${domain}/cart/latest/remoteEntry.js`,
+        offer: `offer@${domain}/offer/latest/remoteEntry.js`,
+        product: `product@${domain}/product/latest/remoteEntry.js`,
+        shared: `shared@${domain}/shared/latest/remoteEntry.js`,
       },
       shared: {
         ...deps,

@@ -15,8 +15,8 @@ const prodConfig = {
       name: "offer",
       filename: "remoteEntry.js",
       remotes: {
-        shared: `shared@${domain}shared/latest/remoteEntry.js`,
-        product: `product@${domain}product/latest/remoteEntry.js`,
+        shared: `shared@${domain}/shared/latest/remoteEntry.js`,
+        product: `product@${domain}/product/latest/remoteEntry.js`,
       },
       exposes: {
         "./Offers": "./src/components/LatestOffers",
