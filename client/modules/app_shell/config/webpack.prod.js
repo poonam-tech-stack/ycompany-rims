@@ -14,7 +14,7 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: "app_shell",
       remotes: {
-        auth: `auth@${domain}auth/latest/remoteEntry.js`,
+        auth: `auth@${domain}auth/latest11/remoteEntry.js`,
         cart: `cart@${domain}cart/latest/remoteEntry.js`,
         offer: `offer@${domain}offer/latest/remoteEntry.js`,
         product: `product@${domain}product/latest/remoteEntry.js`,
