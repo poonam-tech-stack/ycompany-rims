@@ -65,7 +65,7 @@ To run product independently follow below steps:
 4. product will run on http://localhost:8004.
 
 To run shared mfe follow below steps (Shared needs to be run with all mfes):
-1. Go to auth folder
+1. Go to shared folder
 2. yarn install
 3. yarn start
 4. shared will run on http://localhost:8005.
