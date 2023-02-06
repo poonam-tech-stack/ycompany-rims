@@ -17,11 +17,11 @@ import { SECTIONS } from "../../constants";
 const Dashboard = () => {
   const history = useHistory();
   const theme = useTheme();
-  
+
   return (
     <Box sx={{ pb: "20px", backgroundColor: theme.backgroundLightBlue }}>
       <Container maxWidth={false}>
-        <Typography variant="h3" gutterBottom>
+        <Typography variant="h4" gutterBottom>
           BEST BUYS
         </Typography>
         <Grid container spacing={4}>

@@ -1,9 +1,21 @@
 const SECTIONS = [
   {
+    title: "Shoes",
+    imageUrl: "https://i.ibb.co/DDYkrbP/Shoes.png",
+    linkUrl: "shop?productType=shoes",
+    id: "shoes",
+  },
+  {
     title: "Sweaters",
     imageUrl: "https://i.ibb.co/DrtfbNk/Sweators.png",
     linkUrl: "shop?productType=sweaters",
     id: "sweaters",
+  },
+  {
+    title: "Moleskin Jackets",
+    imageUrl: "https://i.ibb.co/PtQxpqL/Molee-Skin-Jackets.png",
+    linkUrl: "shop?productType=jackets",
+    id: "jackets",
   },
   {
     title: "Tattersall hunt shirts",
@@ -12,22 +24,10 @@ const SECTIONS = [
     id: "shirts",
   },
   {
-    title: "Moleskin work Jackets",
-    imageUrl: "https://i.ibb.co/PtQxpqL/Molee-Skin-Jackets.png",
-    linkUrl: "shop?productType=jackets",
-    id: "jackets",
-  },
-  {
     title: "Corduroy Shirts",
     imageUrl: "https://i.ibb.co/xMNq6gM/Corduroy-Shirts.png",
     linkUrl: "shop?productType=cordurShirts",
     id: "cordurShirts",
-  },
-  {
-    title: "Shoes",
-    imageUrl: "https://i.ibb.co/DDYkrbP/Shoes.png",
-    linkUrl: "shop?productType=shoes",
-    id: "shoes",
   },
   {
     title: "Stilettos",

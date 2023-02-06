@@ -108,7 +108,7 @@
       "image": "https://i.ibb.co/QMjsTwJ/Paiseley-Print-Shawl-With-Frayed-Hames.png",
       "price": "6888",
       "productType": "shawl",
-      "tags": ["shawl for women", "shawls"]
+      "tags": ["shawl for women"]
     },
     {
       "_id": 12,
@@ -149,6 +149,56 @@
       "price": "5000",
       "productType": "jackets",
       "tags": ["jacket for boys", "jackets for kids", "kids jacket"]
+    },
+    {
+      "_id": 16,
+      "name": "Corduory Women Shirt",
+      "category": "women",
+      "description": "Patched shirt",
+      "image": "https://i.ibb.co/YZMLd9n/Corduory-women-shirt.png",
+      "price": "1000",
+      "productType": "shirts",
+      "tags": ["shirt"]
+    },
+    {
+      "_id": 17,
+      "name": "Trendyol",
+      "category": "women",
+      "description": "High Neck Styled Pullover",
+      "image": "https://i.ibb.co/yQ4qxtg/green-sweater.png",
+      "price": "1000",
+      "productType": "sweaters",
+      "tags": ["sweator for women"]
+    },
+    {
+      "_id": 18,
+      "name": "Hunter shirt",
+      "category": "men",
+      "description": "Green hunter shirt",
+      "image": "https://i.ibb.co/VMVcttY/hunter-corduory-shirt.png",
+      "price": "1500",
+      "productType": "cordurShirts",
+      "tags": ["shirt for men"]
+    },
+    {
+      "_id": 19,
+      "name": "Red Shiny Pump",
+      "category": "women",
+      "description": "Platform dress heel",
+      "image": "https://i.ibb.co/rfPfs4h/red-Shiny-Heels.png",
+      "price": "3000",
+      "productType": "stilettos",
+      "tags": ["stilettos for women"]
+    },
+    {
+      "_id": 20,
+      "name": "Pink-Stelatoes",
+      "category": "women",
+      "description": "Pink Paris Stelatoes",
+      "image": "https://i.ibb.co/vjFY0xv/Pink-Stelatoes.png",
+      "price": "2400",
+      "productType": "stilettos",
+      "tags": ["stilettos for women"]
     }
   ]
 }

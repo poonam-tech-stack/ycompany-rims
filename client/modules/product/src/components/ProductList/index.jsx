@@ -1,10 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { Grid, Container } from "@mui/material";
-import CircularProgress from "@mui/material/CircularProgress";
+import { LinearProgress, Box } from "@mui/material";
 
 import useProducts from "../../enhancers/useProducts";
-import NoProducts from "../NoProducts.jsx";
 import Product from "../Product";
 
 const ErrorPage = React.lazy(() => import("shared/ErrorPage"));
@@ -15,11 +14,13 @@ const ProductList = () => {
   const productType = new URLSearchParams(param).get("productType");
   const { products, loading, error } = useProducts({ category, productType });
 
-  if (loading) return <CircularProgress />;
+  if (loading)
+    return (
+      <Box sx={{ width: "100%" }}>
+        <LinearProgress />
+      </Box>
+    );
   if (error) return <ErrorPage />;
-  if (!loading && products?.length === 0) {
-    return <NoProducts />;
-  }
 
   return (
     <main>
