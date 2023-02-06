@@ -2,7 +2,9 @@
 
 Description
 
-This React project follows micro-frontends architecture design using Module Federation for higher scalability and maintainablility.
+This project contains frontend and a supporting backend in client and server folders respectively. 
+
+The frontend project follows micro-frontends architecture design using Module Federation for higher scalability and maintainablility.
 Modules are segregated by features as follows:
 
 Modules
