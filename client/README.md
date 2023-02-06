@@ -18,6 +18,8 @@ Components, utils and constants that are shared between different MFEs are in th
 constant theme across different MFEs.
 
 The application uses graphql with Apollo client to query backend.
+Backend is deployed on Render with the following url:
+https://ycompany-graphql.onrender.com/graphql
 
 We can run all MFEs in parallel by running below commands in root folder(client):
 1. yarn install
